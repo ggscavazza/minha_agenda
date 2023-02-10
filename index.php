@@ -32,7 +32,7 @@
 
     <body>
         <div class="banner">
-            <img src="logo_drCarlosCatharin_sf.png" width="50%">
+            <img src="logo_drCarlosCatharin_sf.png">
         </div>
 
         <div class="ocean">
