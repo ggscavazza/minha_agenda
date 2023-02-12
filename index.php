@@ -17,7 +17,17 @@
     $meses[11]  = "Novembro";
     $meses[12]  = "Dezembro";
 
+    $nomes_dias                 = array();
+    $nomes_dias['Sunday']       = "Domingo";
+    $nomes_dias['Monday']       = "Segunda-feira";
+    $nomes_dias['Tuesday']      = "Terça-feira";
+    $nomes_dias['Wednesday']    = "Quarta-feira";
+    $nomes_dias['Thursday']     = "Quinta-feira";
+    $nomes_dias['Friday']       = "Sexta-feira";
+    $nomes_dias['Saturday']     = "Sábado";
+
     $mes_atual = date('n');
+    $mes_format = date('m');
     $mes = $meses[$mes_atual];
     $ano = date('Y');
 ?>
@@ -48,8 +58,21 @@
 
             <div class="calendario">
                 <?php for($i=1; $i <= $dias; $i++) { ?>
+                    <?php 
+                        if($i < 10){
+                            $dia = '0'.$i;
+                        }else{
+                            $dia = $i;
+                        }
+
+                        $data_format = $ano.'-'.$mes_format.'-'.$dia;
+                        $dia_semana = date('l', strtotime($data_format));
+                    ?>
                     <div class="dia">
-                        <h4>Dia <?php echo $i; ?></h4>
+                        <h4 align="center">
+                            <?php echo mb_strtoupper($nomes_dias[$dia_semana]); ?><br><br>
+                            Dia <?php echo $dia; ?>
+                        </h4>
 
                         <button>Agendar</button>
                     </div>
