@@ -19,11 +19,11 @@
 
     $nomes_dias                 = array();
     $nomes_dias['Sunday']       = "Domingo";
-    $nomes_dias['Monday']       = "Segunda-feira";
-    $nomes_dias['Tuesday']      = "Terça-feira";
-    $nomes_dias['Wednesday']    = "Quarta-feira";
-    $nomes_dias['Thursday']     = "Quinta-feira";
-    $nomes_dias['Friday']       = "Sexta-feira";
+    $nomes_dias['Monday']       = "Segunda";
+    $nomes_dias['Tuesday']      = "Terça";
+    $nomes_dias['Wednesday']    = "Quarta";
+    $nomes_dias['Thursday']     = "Quinta";
+    $nomes_dias['Friday']       = "Sexta";
     $nomes_dias['Saturday']     = "Sábado";
 
     $mes_atual = date('n');
@@ -43,8 +43,12 @@
     <body>
         <div class="banner">
             <img src="logo_drCarlosCatharin_sf.png">
-        </div>
 
+            <div class="titulo">
+                <h3>Agendamento <?php echo $mes; ?>/<?php echo $ano; ?></h3>
+            </div>
+        </div>
+        
         <div class="ocean">
             <div class="wave"></div>
             <div class="wave"></div>
@@ -52,9 +56,6 @@
         </div>
         
         <div class="container">
-            <div class="titulo">
-                <h2>Agendamento <?php echo $mes; ?>/<?php echo $ano; ?></h2>
-            </div>
 
             <div class="calendario">
                 <?php for($i=1; $i <= $dias; $i++) { ?>
@@ -69,10 +70,10 @@
                         $dia_semana = date('l', strtotime($data_format));
                     ?>
                     <div class="dia">
-                        <h4 align="center">
+                        <h5 align="center">
                             <?php echo mb_strtoupper($nomes_dias[$dia_semana]); ?><br><br>
                             Dia <?php echo $dia; ?>
-                        </h4>
+                        </h5>
 
                         <button>Agendar</button>
                     </div>
