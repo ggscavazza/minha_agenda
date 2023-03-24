@@ -42,7 +42,7 @@
 
     <body>
         <div class="banner">
-            <img src="logo_nutri.png">
+            <img src="logo_exercicio.png">
 
             <div class="titulo">
                 <h3>Agendamento <?php echo $mes; ?>/<?php echo $ano; ?></h3>
