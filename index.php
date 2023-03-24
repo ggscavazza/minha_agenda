@@ -42,7 +42,7 @@
 
     <body>
         <div class="banner">
-            <img src="logo_drCarlosCatharin_sf.png">
+            <img src="logo_brasil.png">
 
             <div class="titulo">
                 <h3>Agendamento <?php echo $mes; ?>/<?php echo $ano; ?></h3>
